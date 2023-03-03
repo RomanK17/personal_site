@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,h2,h3 {
+  margin: 0;
+}
+.header {
+  width: 100%;
+  padding: 15px 0px;
+  text-align:center;
+  font-size: 24px;
+  font-weight: 300;
+  color: grey;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+max-width: 1230px;
+width: 100%;
+margin: 0px auto;
+padding: 0px 15px;
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(290px, 1fr));
+grid-gap:20px;
+}
+
+.hero-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
+
+}
+.hero-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+.hero-links {
+  display: flex;
+}
+.hero-link {
+ margin-right: 10px;
+  font-size: 30px;
+  color: black;
+  transition: color 0.5s;
+}
+.hero-link:hover {
+  color: darkred;
+}
+.hero-box {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: ava-animate 6s infinite alternate;
+/* надо сгладить углы анимации */
+}
+
+@keyframes ava-animate {
+0% {
+ border-radius: 49% 51% 42% 58% / 62% 30% 70% 38%;
+}
+40% { border-radius: 81% 19% 77% 23% / 21% 73% 27% 79%;
+}
+60% { border-radius: 81% 19% 46% 54% / 60% 73% 27% 40%;
+} 
+}
+
+
+@media screen and (max-width: 978px) {
+  .hero {
+    padding-top: 20px;
+  }
+    .hero-container {
+      grid-row-gap: 20px;
+    }
+    .hero-title {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+.hero-subtitle {
+  font-size: 22px;
+}
+.hero-desription {
+  font-size: 14px;
+}
+.hero-about {
+  text-align:center;
+}
+.hero-links {
+  justify-content: center;
+}
+.hero-box {
+  max-width: 350px;
+}
+}
+.whatsapp {
+  font-size: 33px;
+}
+
